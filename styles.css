@@ -484,3 +484,66 @@ input:focus, textarea:focus{
   .yt-card{ grid-column: span 12; } /* stack on mobile */
   .yt-thumb img{ height: 210px; }
 }
+/* Global polish */
+.section{
+  padding: 70px 0;
+}
+
+.section-head-row{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+h1, h2, h3{
+  letter-spacing: -0.02em;
+}
+
+.hero-inner{
+  padding: 42px 32px;
+}
+
+/* Make all card-like things consistent */
+.project-card,
+.gallery-item,
+.yt-card,
+.info-btn,
+.aside-item{
+  border-color: rgba(233,238,252,0.14);
+}
+
+.project-card:hover,
+.gallery-item:hover,
+.yt-card:hover,
+.info-btn:hover{
+  border-color: rgba(214,179,90,0.38);
+}
+
+/* Gallery: nicer ratio + tighter look */
+.gallery-item img{
+  height: 210px;
+}
+
+/* YouTube: show meta under thumbnails */
+.yt-meta{
+  padding: 12px 14px 14px;
+}
+
+.yt-title{
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.yt-desc{
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+}
+
+/* Two columns for youtube on desktop, one on mobile (already, but keep consistent) */
+@media (max-width: 900px){
+  .section-head-row{
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
