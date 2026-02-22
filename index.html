@@ -1,1 +1,256 @@
-<h1>Hello World This is my Awesome new website</h1>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Adesh Dahal — Portfolio</title>
+    <meta name="description" content="Minimalist dark-mode portfolio in midnight blue & gold." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span>Adesh Dahal</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="btn btn-primary" href="#contact">Let’s talk</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <p class="eyebrow">Minimal • Dark Mode • Midnight Blue & Gold</p>
+          <h1 class="headline">Hi, I’m Adesh Dahal.</h1>
+          <p class="subhead">
+            Physics graduate from Tribhuvan University, currently taking my next big step by pursuing a master's degree.
+            Based in Nepal, my mind is usually occupied by theoretical physics.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#projects">View projects</a>
+            <a class="btn btn-ghost" href="#about">About me</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Me -->
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>About Me</h2>
+            <p class="muted">
+              Hi, I'm Adesh Dahal 👋. I am a dedicated Physics graduate from Tribhuvan University,
+              currently taking my next big step by pursuing a master's degree. Based in Nepal, my
+              mind is usually occupied by theoretical physics.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <button class="info-btn is-active" type="button" data-panel="education">
+              <span class="info-emoji" aria-hidden="true">🎓</span>
+              <span class="info-title">Education</span>
+              <span class="info-sub muted">B.Sc. + Master’s</span>
+            </button>
+
+            <button class="info-btn" type="button" data-panel="experience">
+              <span class="info-emoji" aria-hidden="true">💼</span>
+              <span class="info-title">Experience</span>
+              <span class="info-sub muted">Founder & Tutor</span>
+            </button>
+
+            <button class="info-btn" type="button" data-panel="interests">
+              <span class="info-emoji" aria-hidden="true">🧠</span>
+              <span class="info-title">Interests</span>
+              <span class="info-sub muted">Physics • Philosophy</span>
+            </button>
+
+            <button class="info-btn" type="button" data-panel="languages">
+              <span class="info-emoji" aria-hidden="true">🗣️</span>
+              <span class="info-title">Languages</span>
+              <span class="info-sub muted">EN • NP • HI</span>
+            </button>
+
+            <div class="card about-panel" id="about-panel" aria-live="polite">
+              <h3 id="panel-title">🎓 Education</h3>
+              <p class="muted" id="panel-body">
+                B.Sc. in Physics from Tribhuvan University, currently pursuing a master's degree.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Projects</h2>
+            <p class="muted">Hover a project card for a subtle grow effect.</p>
+          </div>
+
+          <div class="grid">
+            <article class="project-card">
+              <div class="project-top">
+                <h3>Project One</h3>
+                <span class="tag">Web</span>
+              </div>
+              <p class="muted">Add a short 1–2 line description here.</p>
+              <div class="project-actions">
+                <a class="btn btn-small btn-primary" href="#" target="_blank" rel="noreferrer">Live</a>
+                <a class="btn btn-small btn-ghost" href="#" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3>Project Two</h3>
+                <span class="tag">UI</span>
+              </div>
+              <p class="muted">Add a short 1–2 line description here.</p>
+              <div class="project-actions">
+                <a class="btn btn-small btn-primary" href="#" target="_blank" rel="noreferrer">Live</a>
+                <a class="btn btn-small btn-ghost" href="#" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-top">
+                <h3>Project Three</h3>
+                <span class="tag">Tools</span>
+              </div>
+              <p class="muted">Add a short 1–2 line description here.</p>
+              <div class="project-actions">
+                <a class="btn btn-small btn-primary" href="#" target="_blank" rel="noreferrer">Live</a>
+                <a class="btn btn-small btn-ghost" href="#" target="_blank" rel="noreferrer">Code</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Contact</h2>
+            <p class="muted">Email me directly or use the footer social links.</p>
+          </div>
+
+          <div class="card contact-card">
+            <form class="contact-form" action="mailto:adeshdahal44@gmail.com" method="post" enctype="text/plain">
+              <label>
+                <span>Name</span>
+                <input name="name" type="text" placeholder="Your name" required />
+              </label>
+
+              <label>
+                <span>Email</span>
+                <input name="email" type="email" placeholder="you@example.com" required />
+              </label>
+
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="5" placeholder="Write your message..." required></textarea>
+              </label>
+
+              <button class="btn btn-primary" type="submit">Send</button>
+              <p class="muted fineprint">
+                This uses <code>mailto:</code> (opens your email app).
+              </p>
+            </form>
+
+            <div class="contact-aside">
+              <h3>Quick details</h3>
+              <p class="muted">Nepal • Physics • Theoretical interests</p>
+
+              <div class="aside-list">
+                <div class="aside-item">
+                  <div class="aside-k">Email</div>
+                  <div class="aside-v"><a href="mailto:adeshdahal44@gmail.com">adeshdahal44@gmail.com</a></div>
+                </div>
+                <div class="aside-item">
+                  <div class="aside-k">Instagram</div>
+                  <div class="aside-v">
+                    <a href="https://www.instagram.com/dahal_2244?igsh=MW55Z2piMW1wMmY0dg==" target="_blank" rel="noreferrer">
+                      @dahal_2244
+                    </a>
+                  </div>
+                </div>
+                <div class="aside-item">
+                  <div class="aside-k">Facebook</div>
+                  <div class="aside-v">
+                    <a href="https://www.facebook.com/hseda.lahad" target="_blank" rel="noreferrer">
+                      hseda.lahad
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="muted">© <span id="year"></span> Adesh Dahal.</p>
+
+        <div class="social">
+          <a href="https://github.com/Adesh4422" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.instagram.com/dahal_2244?igsh=MW55Z2piMW1wMmY0dg==" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.facebook.com/hseda.lahad" target="_blank" rel="noreferrer">Facebook</a>
+          <a href="mailto:adeshdahal44@gmail.com">Email</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const panels = {
+        education: {
+          title: "🎓 Education",
+          body: "B.Sc. in Physics from Tribhuvan University, currently pursuing a master's degree."
+        },
+        experience: {
+          title: "💼 Experience",
+          body: "Founder and former Tutor at Fusion Coaching Centre (2022–2024)."
+        },
+        interests: {
+          title: "🧠 Interests",
+          body: "Theoretical Physics, Philosophy, and Reading."
+        },
+        languages: {
+          title: "🗣️ Languages",
+          body: "English, Nepali, and Hindi."
+        }
+      };
+
+      const btns = document.querySelectorAll(".info-btn");
+      const panelTitle = document.getElementById("panel-title");
+      const panelBody = document.getElementById("panel-body");
+
+      btns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          btns.forEach((b) => b.classList.remove("is-active"));
+          btn.classList.add("is-active");
+
+          const key = btn.dataset.panel;
+          panelTitle.textContent = panels[key].title;
+          panelBody.textContent = panels[key].body;
+        });
+      });
+    </script>
+  </body>
+</html>
