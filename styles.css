@@ -547,3 +547,40 @@ h1, h2, h3{
     flex-direction: column;
   }
 }
+/* Final polish (put at very bottom) */
+body{
+  letter-spacing: 0.1px;
+}
+
+.section-head{
+  max-width: 78ch;
+}
+
+.section-head h2{
+  font-size: 1.85rem;
+}
+
+.hero-inner{
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-inner::after{
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(600px 240px at 20% 10%, rgba(214,179,90,0.16), transparent 60%);
+  pointer-events: none;
+}
+
+.card, .info-btn, .gallery-item, .yt-card{
+  background: rgba(11,18,48,0.50);
+}
+
+.btn{
+  font-weight: 600;
+}
+
+.nav a{
+  font-weight: 600;
+}
