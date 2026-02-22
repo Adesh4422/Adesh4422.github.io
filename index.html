@@ -95,25 +95,38 @@
   <div class="container">
     <div class="section-head">
       <h2>Gallery</h2>
-      <p class="muted">A few photos about me.</p>
+      <p class="muted">Click a photo to view it full size.</p>
     </div>
 
     <div class="gallery-grid">
-      <figure class="gallery-item">
-        <img src="assets/gallery-1.jpg" alt="Adesh — photo 1" loading="lazy" />
-      </figure>
+      <button class="gallery-item" type="button" data-full="assets/a.jpg" aria-label="Open photo a">
+        <img src="assets/a.jpg" alt="Adesh photo a" loading="lazy" />
+      </button>
 
-      <figure class="gallery-item">
-        <img src="assets/gallery-2.jpg" alt="Adesh — photo 2" loading="lazy" />
-      </figure>
+      <button class="gallery-item" type="button" data-full="assets/b.jpg" aria-label="Open photo b">
+        <img src="assets/b.jpg" alt="Adesh photo b" loading="lazy" />
+      </button>
 
-      <figure class="gallery-item">
-        <img src="assets/gallery-3.jpg" alt="Adesh — photo 3" loading="lazy" />
-      </figure>
+      <button class="gallery-item" type="button" data-full="assets/c.jpg" aria-label="Open photo c">
+        <img src="assets/c.jpg" alt="Adesh photo c" loading="lazy" />
+      </button>
 
-      <figure class="gallery-item">
-        <img src="assets/gallery-4.jpg" alt="Adesh — photo 4" loading="lazy" />
-      </figure>
+      <button class="gallery-item" type="button" data-full="assets/d.jpg" aria-label="Open photo d">
+        <img src="assets/d.jpg" alt="Adesh photo d" loading="lazy" />
+      </button>
+    </div>
+  </div>
+
+  <!-- Lightbox (hidden until you click an image) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-close="true"></div>
+
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button class="lightbox-close" type="button" id="lightboxClose" aria-label="Close (Esc)">
+        ×
+      </button>
+      <img class="lightbox-img" id="lightboxImg" alt="" />
+      <p class="lightbox-hint muted">Press Esc or click outside the image to close.</p>
     </div>
   </div>
 </section>
