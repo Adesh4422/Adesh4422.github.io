@@ -243,6 +243,73 @@
           panelBody.textContent = panels[key].body;
         });
       });
-    </script>
+     <script>
+  // footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // About Me buttons -> details panel (keep your existing code)
+  const panels = {
+    education: { title: "🎓 Education", body: "B.Sc. in Physics from Tribhuvan University, currently pursuing a master's degree." },
+    experience: { title: "💼 Experience", body: "Founder and former Tutor at Fusion Coaching Centre (2022–2024)." },
+    interests: { title: "🧠 Interests", body: "Theoretical Physics, Philosophy, and Reading." },
+    languages: { title: "🗣️ Languages", body: "English, Nepali, and Hindi." }
+  };
+
+  const btns = document.querySelectorAll(".info-btn");
+  const panelTitle = document.getElementById("panel-title");
+  const panelBody = document.getElementById("panel-body");
+
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btns.forEach((b) => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
+
+      const key = btn.dataset.panel;
+      panelTitle.textContent = panels[key].title;
+      panelBody.textContent = panels[key].body;
+    });
+  });
+
+  // Lightbox gallery
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const lightboxClose = document.getElementById("lightboxClose");
+  const galleryButtons = document.querySelectorAll(".gallery-item[data-full]");
+
+  function openLightbox(src, altText){
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    lightboxImg.src = src;
+    lightboxImg.alt = altText || "Full size image";
+    document.body.style.overflow = "hidden"; // prevent background scroll
+  }
+
+  function closeLightbox(){
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    lightboxImg.src = "";
+    lightboxImg.alt = "";
+    document.body.style.overflow = "";
+  }
+
+  galleryButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const img = btn.querySelector("img");
+      openLightbox(btn.dataset.full, img?.alt);
+    });
+  });
+
+  lightboxClose.addEventListener("click", closeLightbox);
+
+  // close when clicking backdrop
+  lightbox.addEventListener("click", (e) => {
+    if (e.target?.dataset?.close === "true") closeLightbox();
+  });
+
+  // close on Esc
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("is-open")) closeLightbox();
+  });
+</script>
   </body>
 </html>
