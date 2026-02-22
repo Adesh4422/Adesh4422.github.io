@@ -358,12 +358,16 @@ input:focus, textarea:focus{
 .lightbox{
   position: fixed;
   inset: 0;
-  display: none; /* hidden by default */
   z-index: 1000;
+
+  /* hidden state */
+  opacity: 0;
+  pointer-events: none;
 }
 
 .lightbox.is-open{
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .lightbox-backdrop{
@@ -397,10 +401,6 @@ input:focus, textarea:focus{
   font-size: 26px;
   line-height: 1;
   cursor: pointer;
-}
-
-.lightbox-close:hover{
-  border-color: rgba(214,179,90,0.35);
 }
 
 .lightbox-img{
