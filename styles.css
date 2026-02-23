@@ -742,3 +742,73 @@ body::before{
 .section-head p.muted{
   max-width: 75ch;
 }
+/* ===== Minimal premium theme fix (paste at very bottom) ===== */
+
+/* 1) Calmer, cleaner background texture */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.09; /* lower = calmer */
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(233,238,252,0.14) 1px, transparent 1px);
+  background-size: 30px 30px;
+  mask-image: radial-gradient(900px 520px at 35% 0%, #000 38%, transparent 74%);
+  z-index: 0;
+}
+
+/* make sure content sits above texture */
+.site-header, main, footer{ position: relative; z-index: 1; }
+
+/* 2) Give each section a soft surface so it doesn't feel "floating" */
+.section{
+  padding: 74px 0;
+}
+
+.section .container{
+  position: relative;
+}
+
+/* subtle glass panel behind each section */
+.section .container::before{
+  content: "";
+  position: absolute;
+  inset: -18px;
+  border-radius: calc(var(--radius) + 12px);
+  background: rgba(11, 18, 48, 0.34);
+  border: 1px solid rgba(233, 238, 252, 0.10);
+  box-shadow: 0 18px 60px rgba(0,0,0,0.34);
+  backdrop-filter: blur(10px);
+  z-index: 0;
+}
+
+/* keep actual content above the panel */
+.section .container > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* 3) Improve card contrast and consistency */
+.card,
+.project-card,
+.info-btn,
+.gallery-item,
+.yt-card,
+.aside-item{
+  background: rgba(11,18,48,0.60);
+  border-color: rgba(233,238,252,0.14);
+}
+
+.section-head{
+  margin-bottom: 22px;
+}
+
+.section-head p.muted{
+  max-width: 78ch;
+}
+
+/* 4) Slightly softer hover scale (your project cards pop too hard) */
+.project-card:hover{
+  transform: translateY(-2px);
+}
