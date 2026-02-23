@@ -701,3 +701,30 @@ body::before{
     margin-left: 0;
   }
 }
+/* ===== Make sections feel like intentional surfaces ===== */
+.section{
+  padding: 76px 0;
+}
+
+.section .container{
+  position: relative;
+}
+
+/* This creates a clean panel behind each section */
+.section .container::before{
+  content: "";
+  position: absolute;
+  inset: -18px;
+  border-radius: calc(var(--radius) + 10px);
+  background: rgba(11, 18, 48, 0.38);
+  border: 1px solid rgba(233, 238, 252, 0.10);
+  box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+  z-index: 0;
+}
+
+/* Put actual content above the panel */
+.section .container > *{
+  position: relative;
+  z-index: 1;
+}
