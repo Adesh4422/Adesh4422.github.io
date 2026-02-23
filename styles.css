@@ -728,3 +728,17 @@ body::before{
   position: relative;
   z-index: 1;
 }
+/* Cards: slightly brighter + clearer border */
+.card,
+.project-card,
+.info-btn,
+.gallery-item,
+.yt-card,
+.aside-item{
+  background: rgba(11,18,48,0.62);
+  border-color: rgba(233,238,252,0.14);
+}
+
+.section-head p.muted{
+  max-width: 75ch;
+}
