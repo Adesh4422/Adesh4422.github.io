@@ -584,3 +584,120 @@ body{
 .nav a{
   font-weight: 600;
 }
+/* ===== Theme refresh + hero profile layout ===== */
+
+/* Add subtle grid texture over your existing gradients */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(to right, rgba(233,238,252,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(233,238,252,0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(900px 500px at 30% 0%, #000 40%, transparent 72%);
+  z-index: 0;
+}
+
+/* ensure content is above the texture */
+.site-header, main, footer{
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero grid layout */
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 22px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow graphics inside hero */
+.hero-inner::before{
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background:
+    radial-gradient(500px 280px at 15% 25%, rgba(214,179,90,0.18), transparent 60%),
+    radial-gradient(520px 320px at 90% 10%, rgba(86,127,255,0.16), transparent 62%);
+  pointer-events: none;
+  z-index: 0;
+}
+.hero-copy, .hero-media{ position: relative; z-index: 1; }
+
+.cta-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+/* Badges */
+.hero-badges{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.badge{
+  font-size: 0.9rem;
+  color: var(--text);
+  border: 1px solid rgba(233,238,252,0.14);
+  background: rgba(233,238,252,0.04);
+  padding: 7px 12px;
+  border-radius: 999px;
+}
+
+/* Profile picture (round) */
+.profile-wrap{
+  border-radius: 999px;
+  padding: 10px;
+  border: 1px solid rgba(233,238,252,0.14);
+  background:
+    radial-gradient(120px 120px at 35% 30%, rgba(241,216,138,0.30), transparent 62%),
+    rgba(233,238,252,0.03);
+  box-shadow: 0 18px 55px rgba(0,0,0,0.55);
+  width: min(320px, 100%);
+  margin-left: auto;
+}
+
+.profile-pic{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 999px;
+  display: block;
+  border: 1px solid rgba(233,238,252,0.10);
+}
+
+/* Small info card below photo */
+.profile-card{
+  margin-top: 14px;
+  margin-left: auto;
+  width: min(360px, 100%);
+  border-radius: var(--radius);
+  border: 1px solid rgba(233,238,252,0.14);
+  background: rgba(11,18,48,0.55);
+  padding: 14px;
+}
+
+.profile-card-title{
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+/* Mobile */
+@media (max-width: 900px){
+  .hero-grid{
+    grid-template-columns: 1fr;
+  }
+  .profile-wrap, .profile-card{
+    margin-left: 0;
+  }
+}
