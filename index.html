@@ -18,8 +18,8 @@
 
         <nav class="nav" aria-label="Primary">
           <a href="#about">About</a>
-          <a href="#gallery">Gallery</a>
           <a href="#youtube">YouTube</a>
+          <a href="#gallery">Gallery</a>
           <a href="#contact">Contact</a>
         </nav>
 
@@ -39,7 +39,7 @@
           </p>
 
           <div class="cta-row">
-            <a class="btn btn-primary" href="#gallery">View gallery</a>
+            <a class="btn btn-primary" href="#youtube">View YouTube</a>
             <a class="btn btn-ghost" href="#about">About me</a>
           </div>
         </div>
@@ -92,45 +92,6 @@
         </div>
       </section>
 
-<section id="gallery" class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2>Gallery</h2>
-      <p class="muted">Click a photo to view it full size.</p>
-    </div>
-
-    <div class="gallery-grid">
-      <button class="gallery-item" type="button" data-full="assets/a.jpg" aria-label="Open photo a">
-        <img src="assets/a.jpg" alt="Adesh photo a" loading="lazy" />
-      </button>
-
-      <button class="gallery-item" type="button" data-full="assets/b.jpg" aria-label="Open photo b">
-        <img src="assets/b.jpg" alt="Adesh photo b" loading="lazy" />
-      </button>
-
-      <button class="gallery-item" type="button" data-full="assets/c.jpg" aria-label="Open photo c">
-        <img src="assets/c.jpg" alt="Adesh photo c" loading="lazy" />
-      </button>
-
-      <button class="gallery-item" type="button" data-full="assets/d.jpg" aria-label="Open photo d">
-        <img src="assets/d.jpg" alt="Adesh photo d" loading="lazy" />
-      </button>
-    </div>
-  </div>
-
-  <!-- Lightbox (hidden until you click an image) -->
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <div class="lightbox-backdrop" data-close="true"></div>
-
-    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Image preview">
-      <button class="lightbox-close" type="button" id="lightboxClose" aria-label="Close (Esc)">
-        ×
-      </button>
-      <img class="lightbox-img" id="lightboxImg" alt="" />
-      <p class="lightbox-hint muted">Press Esc or click outside the image to close.</p>
-    </div>
-  </div>
-</section>
       <section id="youtube" class="section">
   <div class="container">
     <div class="section-head">
@@ -188,6 +149,47 @@
     </div>
   </div>
 </section>
+
+<section id="gallery" class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Gallery</h2>
+      <p class="muted">Click a photo to view it full size.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <button class="gallery-item" type="button" data-full="assets/a.jpg" aria-label="Open photo a">
+        <img src="assets/a.jpg" alt="Adesh photo a" loading="lazy" />
+      </button>
+
+      <button class="gallery-item" type="button" data-full="assets/b.jpg" aria-label="Open photo b">
+        <img src="assets/b.jpg" alt="Adesh photo b" loading="lazy" />
+      </button>
+
+      <button class="gallery-item" type="button" data-full="assets/c.jpg" aria-label="Open photo c">
+        <img src="assets/c.jpg" alt="Adesh photo c" loading="lazy" />
+      </button>
+
+      <button class="gallery-item" type="button" data-full="assets/d.jpg" aria-label="Open photo d">
+        <img src="assets/d.jpg" alt="Adesh photo d" loading="lazy" />
+      </button>
+    </div>
+  </div>
+
+  <!-- Lightbox (hidden until you click an image) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-close="true"></div>
+
+    <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button class="lightbox-close" type="button" id="lightboxClose" aria-label="Close (Esc)">
+        ×
+      </button>
+      <img class="lightbox-img" id="lightboxImg" alt="" />
+      <p class="lightbox-hint muted">Press Esc or click outside the image to close.</p>
+    </div>
+  </div>
+</section>
+      
       <!-- Contact -->
       <section id="contact" class="section">
         <div class="container">
